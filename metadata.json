@@ -1,0 +1,6 @@
+{
+  "name": "Sakura Movie Recap",
+  "description": "မြန်မာဘာသာစကားဖြင့် AI ဇာတ်ကားပြန်ပြောပြချက် (Movie Recap)၊ အသံ ၁၀ မျိုး၊ မြန်မာစာတန်းထိုးနှင့် ဗီဒီယိုဖန်တီးနိုင်သော Sakura Movie Recap ဝဘ်အက်ပ်",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

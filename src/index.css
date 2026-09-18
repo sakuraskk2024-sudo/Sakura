@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Plus Jakarta Sans', 'Noto Sans Myanmar', 'Padauk', system-ui, -apple-system, sans-serif;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #090a16;
+  color: #e2e8f0;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f1026;
+}
+::-webkit-scrollbar-thumb {
+  background: #3b2d60;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6d28d9;
+}
+
+/* Myanmar text line-height adjustment for clarity with offline device font fallbacks */
+.mm-font, body {
+  font-family: 'Noto Sans Myanmar', 'Padauk', 'Pyidaungsu', 'Myanmar Text', 'Masterpiece Uni Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.75;
+}
+
+/* Dynamic shifting gradient and glowing keyframes for Sakura Logo & Text */
+@keyframes sakuraGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes sakuraGlowPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(244, 114, 182, 0.4)) drop-shadow(0 0 22px rgba(168, 85, 247, 0.3));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 18px rgba(236, 72, 153, 0.75)) drop-shadow(0 0 32px rgba(147, 51, 234, 0.5));
+    transform: scale(1.03);
+  }
+}
+
+.sakura-logo-animated {
+  background: linear-gradient(135deg, #ec4899, #a855f7, #6366f1, #f43f5e, #ec4899);
+  background-size: 300% 300%;
+  animation: sakuraGradientShift 6s ease infinite;
+}
+
+.sakura-glow-animated {
+  animation: sakuraGlowPulse 4s ease-in-out infinite;
+}
+
+.sakura-text-gradient-animated {
+  background: linear-gradient(90deg, #f472b6, #e879f9, #c084fc, #818cf8, #f472b6);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: sakuraGradientShift 5s linear infinite;
+}
+
